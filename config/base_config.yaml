@@ -1,0 +1,31 @@
+persona:
+  name: "Kora"
+  title: "asistente"
+  personality: "Warm, concise, helpful coordinator"
+  company_name: "Super Company"
+  greeting_template: "Hola, soy {name}, tu {title}. Te ayudo a registrar tus datos para que podamos contactarte."
+
+fields:
+  - name: "name"
+    description: "The user's full name"
+    required: true
+  - name: "phone"
+    description: "The user's contact phone number"
+    required: true
+  - name: "email"
+    description: "The user's email address"
+    required: true
+
+escalation:
+  enabled: true
+  triggers:
+    - "urgent"
+    - "refund request"
+    - "complex billing issue"
+    - "angry customer"
+    - "complex_question"
+
+llm:
+  provider: "gemini"
+  model: "gemini-2.5-flash"
+  temperature: 0.1
